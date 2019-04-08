@@ -48,13 +48,15 @@ sudo python get-pip.py
 
 # Install google api 
 [Doc](https://cloud.google.com/vision/docs/libraries#client-libraries-install-python)
-cd Iot_EdgeComputing/env/bin
+cd pines_raspberry/pines_raspberry_img/env/bin
+
 virtualenv --python python3 env
 
 source env/bin/activate
-sudo env/bin/pip install google-cloud-storage
-sudo env/bin/pip install google-cloud-vision
-sudo env/bin/pip install google-api-python-client
+
+sudo pip install google-cloud-storage
+sudo pip install google-cloud-vision
+sudo pip install google-api-python-client
 
 
 # If you want to stop using the virtualenv and go back to your global Python, you can deactivate it:
@@ -76,10 +78,11 @@ gcloud auth list
  ```
 
 ### 6. Test using a local image (tree)
- * cd pines_raspberry/image_vision 
- * Write a python file /home/pi/Iot_EdgeComputing/gcp_vision.pines.py
+ * cd ..  
+ * cd pines_raspberry/pines_raspberry_img/image_vision 
+ * Write a python file gcp_vision.pines.py
 
- * gcp_vision.pines.py  
+ * python gcp_vision.pines.py  
  
  ```
  
@@ -99,8 +102,5 @@ White pine
 ### 7. [Add members](https://console.cloud.google.com/cloud-resource-manager?_ga=2.63823599.-1312817518.1554382349)
 
 
-### 8. To do 
-Warinings 
-/home/pi/Documents/pines_raspberry/env/bin/env/lib/python3.5/site-packages/google/auth/_default.py:66: UserWarning: Your application has authenticated using end user credentials from Google Cloud SDK. We recommend that most server applications use service accounts instead. If your application continues to use end user credentials from Cloud SDK, you might receive a "quota exceeded" or "API not enabled" error. For more information about service accounts, see https://cloud.google.com/docs/authentication/
-  warnings.warn(_CLOUD_SDK_CREDENTIALS_WARNING)
-Labels:
+
+
