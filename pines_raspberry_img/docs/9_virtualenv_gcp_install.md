@@ -1,7 +1,6 @@
 ---
-title: GCP Vision
+title: 1.2 Set Up a Python Development Environment using virtualenv
 ---
-
 ### 1. Set up Google Cloud Platform (GCP)
  * Go to [Create service account key page](https://console.cloud.google.com/apis/credentials/serviceaccountkey?_ga=2.262041677.-1312817518.1554382349&project=quiet-mechanic-236610&folder&organizationId)
   * Select project on top 'pines1'
@@ -18,7 +17,6 @@ title: GCP Vision
 [Installing with apt-get for Debian and Ubuntu](https://cloud.google.com/sdk/docs/downloads-apt-get)  
 
  ```
-cd pines_raspberry 
 
 export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
 
@@ -28,9 +26,25 @@ curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
 
 sudo apt-get update && sudo apt-get install google-cloud-sdk 
  ```
+ 
+### 3. Setup GCloud SDK
+ ```
+gcloud init
+ ```
+ 
+### 4. Authorizing Cloud SDK tools
+ ```
+gloud auth login
+gcloud auth application-default login
+[Authorizing a service account?](https://cloud.google.com/sdk/docs/authorizing)
+
+gcloud auth list
+ ```
+
+### 5. [Add members](https://console.cloud.google.com/cloud-resource-manager?_ga=2.63823599.-1312817518.1554382349)
 
 
-### 3. Setup the client library on RPI
+### 6. Setup the client library on RPI
 ### Setting Up a Python Development Environment
 [Doc](https://cloud.google.com/python/setup)
 
@@ -52,29 +66,14 @@ source env/bin/activate
 
 sudo pip install google-cloud-storage
 sudo pip install google-cloud-vision
-sudo pip install google-api-python-client
+sudo pip install gologle-api-python-client
 
 
 # If you want to stop using the virtualenv and go back to your global Python, you can deactivate it:
 #deactivate 
  ```
- 
-### 4. Setup GCloud SDK
- ```
-gcloud init
- ```
- 
-### 5. Authorizing Cloud SDK tools
- ```
-gloud auth login
-gcloud auth application-default login
-[Authorizing a service account?](https://cloud.google.com/sdk/docs/authorizing)
 
-gcloud auth list
- ```
-
-### 6. Test using a local image (tree)
- * cd ..  
+### 7. Test using a local image (tree)
  * cd pines_raspberry/pines_raspberry_img/image_vision 
  * Write a python file gcp_vision.pines.py
 
@@ -94,9 +93,3 @@ Tropical and subtropical coniferous forests
 red pine
 White pine
  ```
-
-### 7. [Add members](https://console.cloud.google.com/cloud-resource-manager?_ga=2.63823599.-1312817518.1554382349)
-
-
-
-
