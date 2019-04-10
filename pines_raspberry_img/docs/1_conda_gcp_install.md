@@ -1,5 +1,5 @@
 ---
-title: 1.1 Set Up a Python Environment using conda
+title: Set Up a Python Environment using conda
 ---
 
 
@@ -90,7 +90,7 @@ pip install tensorflow
   * Service account, my account 
   * JSON
  * Provide authentication credentials to your application code 
- * [Enable] billing(https://console.developers.google.com/billing/enable?project=650311275390) 
+ * [Enable billing](https://console.developers.google.com/billing/enable?project=650311275390) 
 
 ```
 export GOOGLE_APPLICATION_CREDENTIALS="/home/pi/gcp/pines1-6e82e765805d.json"
@@ -140,8 +140,7 @@ White pine
 ### Not working 
 ```
 conda install -c conda-forge google-cloud-sdk 
-
-conda install -y -c google-api-python-client
+conda install -y -c goosgle-api-python-client
 ```
 
 ### Reference
