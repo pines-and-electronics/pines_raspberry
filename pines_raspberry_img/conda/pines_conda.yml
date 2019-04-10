@@ -21,10 +21,14 @@ dependencies:
   - openblas=0.2.19=0
   - opencv=3.3.0=py36hb02bd27_0
   - openssl=1.0.2q=hdff2a78_0
+  - pandas=0.23.4=py36h6b76cdf_0
   - pip=18.0=py36_1
   - python=3.6.6=hd0568c0_1
+  - python-dateutil=2.6.1=py_0
+  - pytz=2018.5=py_0
   - readline=7.0=hcb560eb_1
   - setuptools=40.2.0=py36_0
+  - six=1.11.0=py36_1
   - sqlite=3.24.0=hfcb1bcf_1
   - tk=8.6.8=h849d6a0_0
   - wheel=0.31.1=py36_1
@@ -58,10 +62,8 @@ dependencies:
     - protobuf==3.7.1
     - pyasn1==0.4.5
     - pyasn1-modules==0.2.4
-    - pytz==2018.9
     - requests==2.21.0
     - rsa==4.0
-    - six==1.12.0
     - tensorboard==1.13.1
     - tensorflow==1.13.1
     - tensorflow-estimator==1.13.0
