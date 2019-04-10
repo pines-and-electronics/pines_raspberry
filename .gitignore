@@ -1,0 +1,9 @@
+
+
+# Distribution / packaging
+.Python
+bin
+include
+*lib
+# docs
+*draft.md
